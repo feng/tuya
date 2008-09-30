@@ -57,4 +57,5 @@ describe Post, "generate date value automatically" do
   
   it "should have a blank updated date" do
     @post.updated_at.should be_blank
+  end
 end
