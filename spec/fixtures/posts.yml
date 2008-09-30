@@ -1,7 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
+<<<<<<< HEAD:spec/fixtures/posts.yml
 # one:
 #   column: value
 #
 # two:
 #   column: value
+=======
+first_post:
+  title: this is my first post.
+  content: This plugin will create a Google sitemaps compliant XML-Sitemap of your WordPress blog. It supports all of the WordPress generated pages as well as custom ones. Everytime you edit or create a post, your sitemap is updated and all major search engines that support the sitemap protocol, like ASK.com, Google, MSN Search and YAHOO, are notified about the update.
+
+great_post:
+  title: this is the great post
+  content: this is a greate post
+>>>>>>> 9e424c1480a052cf90254e5e9c00af37216b97f5:spec/fixtures/posts.yml
