@@ -59,3 +59,23 @@ describe Post, "generate date value automatically" do
     @post.updated_at.should be_blank
   end
 end
+
+describe Post, "have some comments" do
+  before(:each) do
+    @post = Post.new(:title => "this is third test")
+    @comment = Comment.new(:author_name => "David", :website => 'dwfeng.net', :email => 'tuya@dwfeng.net')
+
+    @post.comments << @comment
+  end
+
+  it "should have a comment if some one added a comment" do
+    @post.should have(1).comment
+  end
+
+  it "should have some comments when added one more comments" do 
+    another_comment = Comment.new(:author_name => "John", :website => 'john.net', :email => 'john@john.net')
+
+    @post.comments << another_comment
+    @post.should have(2).comment
+  end
+end

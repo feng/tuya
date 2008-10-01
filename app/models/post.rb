@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   validates_presence_of :title
 
+  has_many :comments
+
   def initialize_with_defaults(attrs = nil, &block)
     initialize_without_defaults(attrs) do
       setter = lambda { |key, value| self.send("#{key.to_s}=", value) unless !attrs.nil? && attrs.keys.map(&:to_s).include?(key.to_s) }
